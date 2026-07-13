@@ -208,7 +208,7 @@ module bus_err_unit_reg_top #(
   assign unused_be = ^reg_be;
 
   // Assertions for Register Interface
-  `ASSERT(en2addrHit, (reg_we || reg_re) |-> $onehot0(addr_hit))
+  `OCAH_PULP_ASSERT(en2addrHit, (reg_we || reg_re) |-> $onehot0(addr_hit))
 
 endmodule
 
